@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark-Mode-Template</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="header">
+        <nav>
+
+            <a href="#" class="logo"><img src="image\logo-dark.png" id="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Connect</a></li>
+            </ul>
+
+            <div class="toggle-btn" id="btn">
+                <span id="btnText">Dark</span>
+                <img src="image\moon.png" id="btnIcon">
+            </div>
+        </nav>
+
+        <div class="content">
+            <h1>Hello!</h1>
+            <h1><span>I'm</span> Skyler Davila</h1>
+            <p>I'm a developer and technical guru with a passion for web design. There's a solution for everything.
+                You just have to look hard enough to find it!
+            </p>
+            <a href="#">Hire Me</a>
+
+        </div>
+
+        <div class="image-box">
+            <img src="image/selfie.png" class="selfie">
+            <div class="pattern">
+                <img src="image/background.png">
+                <img src="image/background.png">
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <script>
+        let btn = document.getElementById("btn");
+        let btnText = document.getElementById("btnText");
+        let btnIcon = document.getElementById("btnIcon");
+        let logo = document.getElementById("logo");
+
+
+        btn.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+
+            if(document.body.classList.contains("dark-theme")){
+                btnIcon.src = "image/sun.png";
+                btnText.innerHTML = "Light";
+                logo.src = "image/logo-light.png";
+            }else{
+                btnIcon.src = "image/moon.png";
+                btnText.innerHTML = "Dark";
+                logo.src = "image/logo-dark.png";
+            }
+        }
+
+    </script>
+
+
+
+
+</body>
+</html>
